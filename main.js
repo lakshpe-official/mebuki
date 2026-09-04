@@ -21,3 +21,27 @@ document.addEventListener("click", (event) => {
     });
   }
 });
+document.querySelectorAll(".video-player").forEach((player) => {
+  const video = player.querySelector("video");
+  const playBtn = player.querySelector(".video-mini-play");
+  const soundBtn = player.querySelector(".video-mini-sound");
+
+  playBtn.addEventListener("click", () => {
+    if (video.paused) {
+      video.play();
+      playBtn.textContent = "❚❚";
+    } else {
+      video.pause();
+      playBtn.textContent = "▶";
+    }
+  });
+
+  soundBtn.addEventListener("click", () => {
+    video.muted = !video.muted;
+    soundBtn.textContent = video.muted ? "🔇" : "🔊";
+  });
+
+  video.addEventListener("ended", () => {
+    playBtn.textContent = "▶";
+  });
+});

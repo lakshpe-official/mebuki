@@ -26,22 +26,28 @@ document.querySelectorAll(".video-player").forEach((player) => {
   const playBtn = player.querySelector(".video-mini-play");
   const soundBtn = player.querySelector(".video-mini-sound");
 
-  playBtn.addEventListener("click", () => {
+  playBtn.addEventListener("click", async () => {
     if (video.paused) {
-      video.play();
-      playBtn.textContent = "❚❚";
+      try {
+        await video.play();
+        playBtn.innerHTML = "&#10074;&#10074;";
+      } catch (error) {
+        console.error("Video play failed:", error);
+      }
     } else {
       video.pause();
-      playBtn.textContent = "▶";
+      playBtn.innerHTML = "&#9654;";
     }
   });
 
   soundBtn.addEventListener("click", () => {
     video.muted = !video.muted;
-    soundBtn.textContent = video.muted ? "🔇" : "🔊";
+    soundBtn.innerHTML = video.muted
+      ? "&#128263;"
+      : "&#128266;";
   });
 
   video.addEventListener("ended", () => {
-    playBtn.textContent = "▶";
+    playBtn.innerHTML = "&#9654;";
   });
 });

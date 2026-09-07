@@ -1,0 +1,977 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background: #ffffff;
+  color: #111111;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Hiragino Kaku Gothic ProN",
+    "Yu Gothic",
+    sans-serif;
+  overflow-x: hidden;
+}
+
+body {
+  padding: 22px 16px 40px;
+}
+
+.page {
+  width: 100%;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.app-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 3px 0 5px;
+}
+
+.app-icon-wrap {
+  flex: 0 0 76px;
+}
+
+.app-icon {
+  display: block;
+  width: 76px;
+  height: 76px;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.10);
+}
+
+.app-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.app-info h1 {
+  margin: 0 0 4px;
+  font-size: 25px;
+  line-height: 1.12;
+  font-weight: 400;
+  color: #111111;
+}
+
+.app-category {
+  margin: 0 0 4px;
+  font-size: 13px;
+  line-height: 1.35;
+  font-weight: 700;
+  color: #1967d2;
+}
+
+.app-description {
+  margin: 0;
+  font-size: 11.8px;
+  line-height: 1.55;
+  color: #555555;
+}
+
+.app-meta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 2px 0 3px;
+}
+
+.meta-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+}
+
+.meta-divider {
+  width: 1px;
+  height: 32px;
+  background: #d6d6d6;
+}
+
+.age-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 30px;
+  height: 27px;
+  padding: 0 3px;
+  border: 2px solid #111111;
+  border-radius: 3px;
+  color: #111111;
+  font-size: 13px;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.download-size-icon {
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #111111;
+  font-size: 21px;
+  line-height: 1;
+  font-weight: 500;
+}
+
+.meta-text {
+  margin-top: 3px;
+  color: #333333;
+  font-size: 11.5px;
+  line-height: 1.2;
+  font-weight: 500;
+}
+.download-section {
+  width: 94%;
+  margin: 2px auto 10px;
+}
+
+.download-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 43px;
+  padding: 0 14px;
+  border-radius: 24px;
+background: #1967d2;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14.5px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+box-shadow: 0 8px 22px rgba(25, 103, 210, 0.24);
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    opacity 0.18s ease;
+}
+
+.download-button:active {
+  transform: scale(0.985);
+  box-shadow: 0 4px 14px rgba(25, 103, 210, 0.20);
+}
+
+.policy-section {
+  border-top: 1px solid #ececec;
+  padding-top: 12px;
+}
+
+.section-heading h2 {
+  margin: 0 0 3px;
+  font-size: 22px;
+  line-height: 1.25;
+  font-weight: 800;
+  color: #111111;
+}
+
+.section-heading p {
+  margin: 0;
+  font-size: 11.8px;
+  line-height: 1.55;
+  color: #666666;
+}
+
+.policy-card {
+  margin-top: 10px;
+  padding: 13px 14px;
+  border: 1px solid #eeeeee;
+  border-radius: 17px;
+  background: #ffffff;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+}
+
+.policy-card > p {
+  margin: 0;
+  font-size: 11.8px;
+  line-height: 1.6;
+  color: #333333;
+}
+
+.policy-list {
+  margin-top: 8px;
+}
+
+.policy-item {
+  display: flex;
+  gap: 10px;
+  padding: 10px 2px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.policy-icon {
+  flex: 0 0 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #fff0f7;
+  color: #db438c;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.policy-text h3 {
+  margin: 0 0 2px;
+  font-size: 13.5px;
+  line-height: 1.35;
+  font-weight: 800;
+  color: #111111;
+}
+
+.policy-text p {
+  margin: 0;
+  font-size: 11px;
+  line-height: 1.5;
+  color: #666666;
+}
+
+@media (max-width: 480px) {
+
+  body {
+    padding: 14px 14px 28px;
+  }
+
+  .app-header {
+    gap: 12px;
+    padding: 4px 0 6px;
+  }
+
+.app-meta {
+  margin: 2px 0 3px;
+}
+
+  .meta-item {
+    min-height: 54px;
+  }
+
+.download-section {
+  width: 94%;
+  margin: 2px auto 10px;
+}
+
+  .download-button {
+    min-height: 46px;
+    font-size: 15px;
+  }
+.policy-section {
+  padding-top: 12px;
+}
+
+  .section-heading h2 {
+    margin-bottom: 3px;
+    font-size: 20px;
+  }
+
+  .section-heading p {
+    line-height: 1.55;
+  }
+
+  .policy-card {
+    margin-top: 12px;
+    padding: 14px;
+  }
+
+  .policy-list {
+    margin-top: 8px;
+  }
+
+  .policy-item {
+    gap: 10px;
+    padding: 12px 2px;
+  }
+
+  .policy-text h3 {
+    margin-bottom: 3px;
+  }
+
+  .policy-text p {
+    line-height: 1.55;
+  }
+}
+.mini-app-brand {
+  display: flex;
+  align-items: center;
+justify-content: flex-start;
+  gap: 7px;
+  margin-bottom: 14px;
+}
+
+.mini-app-icon {
+  width: 28px;
+  height: 28px;
+  object-fit: cover;
+  border-radius: 7px;
+}
+
+.mini-app-name {
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 28px;
+  color: #111111;
+}
+.page-footer {
+  margin-top: 10px;
+  padding: 10px 0 2px;
+  border-top: 1px solid #eeeeee;
+  text-align: center;
+}
+
+.footer-brand {
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: #222222;
+}
+
+.footer-jp {
+  margin-left: 5px;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: #666666;
+}
+
+.footer-year {
+  margin-top: 2px;
+  font-size: 10px;
+  color: #888888;
+}
+.more-rules {
+  display: none;
+}
+
+.more-rules.is-open {
+  display: block;
+}
+
+.rules-toggle {
+  width: 100%;
+  margin: 2px 0 0;
+  padding: 13px 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+
+  background: rgba(255, 245, 249, 0.75);
+
+  color: #d93f7c;
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.rules-toggle-arrow {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 1;
+
+  transition: transform 0.22s ease;
+}
+
+.rules-toggle.is-open .rules-toggle-arrow {
+  transform: rotate(180deg);
+}
+/* ===== Policy section compact final override ===== */
+
+/* 每一项整体压缩间距 */
+.policy-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+
+  padding: 14px 4px;
+}
+
+/* 原来的 01–08 数字圆圈改成黑色小圆点 */
+.policy-icon {
+  width: 7px;
+  height: 7px;
+
+  min-width: 7px;
+  flex: 0 0 7px;
+
+  margin-top: 8px;
+
+  padding: 0;
+
+  border-radius: 50%;
+  background: #171717;
+
+  color: transparent;
+  font-size: 0;
+  line-height: 0;
+}
+
+/* 标题稍紧凑 */
+.policy-item h3 {
+  margin: 0 0 3px;
+
+  font-size: 16px;
+  line-height: 1.3;
+}
+
+/* 说明文字 */
+.policy-item p {
+  margin: 0;
+
+  font-size: 13px;
+  line-height: 1.55;
+  color: #777;
+}
+
+/* 展开 / 收起按钮缩成最小尺寸 */
+.rules-toggle {
+  width: auto;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+
+  margin: 7px 0 5px 17px;
+  padding: 3px 2px;
+
+  border: none;
+  background: transparent;
+
+  color: #222;
+  font-size: 11px;
+  line-height: 1.2;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+/* 小箭头 */
+.rules-toggle-arrow {
+  display: inline-block;
+
+  font-size: 12px;
+  line-height: 1;
+
+  color: #222;
+
+  transition: transform 0.2s ease;
+}
+
+.rules-toggle.is-open .rules-toggle-arrow {
+  transform: rotate(180deg);
+}
+
+.rules-toggle:hover {
+  color: #111;
+  background: transparent;
+}
+
+.rules-toggle:active {
+  transform: none;
+}
+/* ===== Policy section extra compact spacing ===== */
+
+.policy-item {
+  padding: 9px 4px;
+  gap: 8px;
+}
+
+.policy-item h3 {
+  margin: 0 0 1px;
+  font-size: 16px;
+  line-height: 1.22;
+}
+
+.policy-item p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.38;
+}
+
+/* 小黑点位置一起上移一点 */
+.policy-icon {
+  margin-top: 6px;
+}
+
+/* 展开/关闭按钮进一步贴近上下内容 */
+.rules-toggle {
+  margin: 3px 0 2px 17px;
+  padding: 2px 1px;
+
+  font-size: 10px;
+  line-height: 1.1;
+}
+
+/* 05–08 展开后的每项也保持同样紧凑 */
+.more-rules .policy-item {
+  padding-top: 9px;
+  padding-bottom: 9px;
+}
+
+/* 整个规则区域底部减少留白 */
+.policy-list {
+  margin-bottom: 4px;
+  padding-bottom: 0;
+}
+
+/* 页脚也往上收一点 */
+footer,
+.footer {
+  margin-top: 8px;
+  padding-top: 10px;
+  padding-bottom: 12px;
+}
+/* ===== Data Safety section compact spacing ===== */
+
+/* 下载区与数据安全区之间 */
+.data-safety-section {
+  margin-top: 8px;
+  padding-top: 8px;
+}
+
+/* 数据安全标题 */
+.data-safety-section h2 {
+  margin: 0 0 4px;
+  line-height: 1.2;
+}
+
+/* 标题下面第一段说明 */
+.data-safety-section > p {
+  margin: 0 0 8px;
+  line-height: 1.45;
+}
+
+/* 白色说明框 */
+.data-safety-note,
+.data-safety-card {
+  margin-top: 6px;
+  margin-bottom: 8px;
+  padding: 14px 16px;
+}
+
+/* 说明框内部文字 */
+.data-safety-note p,
+.data-safety-card p {
+  margin: 0;
+  line-height: 1.5;
+}
+/* ===== 数据安全区域：紧凑间距 ===== */
+
+/* 整个数据安全区域顶部距离 */
+.policy-section {
+  margin-top: 8px;
+  padding-top: 6px;
+}
+
+/* 标题区域 */
+.section-heading {
+  margin-bottom: 8px;
+}
+
+/* データセーフティ 标题 */
+.section-heading h2 {
+  margin: 0 0 4px;
+  line-height: 1.2;
+}
+
+/* 标题下面说明 */
+.section-heading p {
+  margin: 0;
+  line-height: 1.45;
+}
+
+/* 白色说明卡片 */
+.policy-card {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  padding: 12px 16px;
+}
+
+/* 卡片里的文字 */
+.policy-card p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* 01 开始的位置往上收 */
+.policy-list {
+  margin-top: 6px;
+}
+/* ===== APP 顶部信息区：整体紧凑 ===== */
+
+/* 顶部信息整体 */
+.app-info,
+.app-header,
+.app-summary {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+/* 头像 + 文字区域 */
+.app-info-main,
+.app-header-main,
+.app-summary-main {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+/* 头像缩小 */
+.app-icon,
+.app-avatar,
+.app-logo {
+  width: 86px;
+  height: 86px;
+  min-width: 86px;
+
+  border-radius: 18px;
+  object-fit: cover;
+}
+
+/* 品牌名称 */
+.app-info h1,
+.app-header h1,
+.app-summary h1 {
+  margin: 0 0 2px;
+  line-height: 1.1;
+}
+
+/* 蓝色副标题 */
+.app-info h2,
+.app-header h2,
+.app-summary h2 {
+  margin: 0 0 3px;
+  line-height: 1.25;
+}
+
+/* 下方说明 */
+.app-info p,
+.app-header p,
+.app-summary p {
+  margin: 0;
+  line-height: 1.4;
+}
+/* ===== MEBUKI mobile compact final ===== */
+
+/* 下载区域整体缩短 */
+.download-section {
+  margin-top: 6px;
+  margin-bottom: 6px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+/* 下载按钮缩短，不再接近满宽 */
+.download-section a,
+.download-button {
+  width: 82%;
+  max-width: 430px;
+
+  min-height: 0;
+  margin: 4px auto 8px;
+  padding: 11px 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 999px;
+
+  font-size: 18px;
+  line-height: 1.15;
+  font-weight: 700;
+}
+
+/* 两张横屏宣传图 */
+.promo-row {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 7px;
+
+  margin: 4px 0 7px;
+  padding: 0;
+}
+
+.promo-row img {
+  display: block;
+
+  width: 100%;
+  aspect-ratio: 16 / 9;
+
+  object-fit: cover;
+
+  border-radius: 10px;
+}
+
+/* 下载区和数据安全标题之间继续压缩 */
+.policy-section {
+  margin-top: 4px;
+  padding-top: 4px;
+}
+
+/* 数据安全标题区域 */
+.section-heading {
+  margin: 0 0 6px;
+}
+
+.section-heading h2 {
+  margin: 0 0 2px;
+
+  font-size: 24px;
+  line-height: 1.15;
+}
+
+.section-heading p {
+  margin: 0;
+
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+/* 白色说明框继续缩短 */
+.policy-card {
+  margin: 6px 0 5px;
+  padding: 11px 14px;
+
+  border-radius: 18px;
+}
+
+.policy-card p {
+  margin: 0;
+
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+/* 规则列表继续向上收 */
+.policy-list {
+  margin-top: 3px;
+  margin-bottom: 0;
+}
+
+/* 每条规则压紧 */
+.policy-item {
+  gap: 8px;
+  padding: 8px 4px;
+}
+
+.policy-item h3 {
+  margin: 0 0 1px;
+
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.policy-item p {
+  margin: 0;
+
+  font-size: 13px;
+  line-height: 1.35;
+  color: #777;
+}
+
+/* 黑色小圆点 */
+.policy-icon {
+  width: 7px;
+  height: 7px;
+  min-width: 7px;
+  flex: 0 0 7px;
+
+  margin-top: 6px;
+  padding: 0;
+
+  border-radius: 50%;
+  background: #171717;
+
+  color: transparent;
+  font-size: 0;
+  line-height: 0;
+}
+
+/* 展开按钮继续保持最小 */
+.rules-toggle {
+  width: auto;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+
+  margin: 2px 0 2px 22px;
+  padding: 2px 0;
+
+  border: none;
+  background: transparent;
+
+  color: #202020;
+
+  font-size: 10px;
+  line-height: 1.1;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.rules-toggle-arrow {
+  font-size: 10px;
+  color: #202020;
+}
+
+.rules-toggle:hover,
+.rules-toggle:active {
+  background: transparent;
+  color: #000;
+}
+
+/* 手机端保证两张横屏图仍然并排 */
+@media (max-width: 430px) {
+  .download-section a,
+  .download-button {
+    width: 84%;
+    padding: 10px 16px;
+    font-size: 17px;
+  }
+
+  .promo-row {
+    gap: 6px;
+  }
+
+  .promo-row img {
+    border-radius: 8px;
+  }
+}
+/* ===== MEBUKI 宣传卡片最终版 ===== */
+
+.promo-row {
+  width: 96%;
+  margin: 10px auto 12px;
+
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+/* 单张宣传卡 */
+.promo-card {
+  position: relative;
+  overflow: hidden;
+
+  padding: 10px 7px 8px;
+
+  border-radius: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+
+  background:
+    radial-gradient(
+      circle at 8% 18%,
+      rgba(122, 205, 115, 0.16),
+      transparent 22%
+    ),
+    radial-gradient(
+      circle at 92% 28%,
+      rgba(132, 215, 124, 0.14),
+      transparent 24%
+    ),
+    linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #fafcf9 100%
+    );
+
+  box-shadow:
+    0 4px 14px rgba(0, 0, 0, 0.07);
+}
+
+/* 顶部标题 */
+.promo-title {
+  text-align: center;
+  margin: 0 0 8px;
+}
+
+.promo-title span {
+  display: block;
+
+  margin-bottom: 1px;
+
+  color: #444;
+  font-size: 11px;
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+.promo-title strong {
+  display: block;
+
+  color: #1d1d1d;
+
+  font-size: 15px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+
+/* 竖屏宣传图 */
+.promo-card img {
+  display: block;
+
+  width: 88%;
+  margin: 0 auto;
+
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* 手机端保持一行两张 */
+@media (max-width: 430px) {
+
+  .promo-row {
+    width: 96%;
+    gap: 8px;
+  }
+
+  .promo-card {
+    padding: 9px 6px 7px;
+    border-radius: 14px;
+  }
+
+  .promo-title {
+    margin-bottom: 7px;
+  }
+
+  .promo-title span {
+    font-size: 10px;
+  }
+
+  .promo-title strong {
+    font-size: 14px;
+  }
+
+  .promo-card img {
+    width: 90%;
+    border-radius: 10px;
+  }
+}

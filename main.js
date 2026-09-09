@@ -51,3 +51,32 @@ document.querySelectorAll(".video-player").forEach((player) => {
     playBtn.innerHTML = "&#9654;";
   });
 });
+const liveReminderButtons = document.querySelectorAll(".live-card");
+
+liveReminderButtons.forEach((card) => {
+  card.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    const button = card.querySelector(".live-button");
+
+    if (!button) return;
+
+    button.innerHTML = `
+      <span>予約しました</span>
+      <span>예약되었습니다</span>
+    `;
+  });
+});
+const contentReminderLink = document.getElementById("content-reminder-link");
+
+if (contentReminderLink) {
+  contentReminderLink.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    contentReminderLink.innerHTML = `
+      <span class="apk-leaf">◆</span>
+      <span>予約しました</span>
+      <span>예약되었습니다</span>
+    `;
+  });
+}
